@@ -5,45 +5,31 @@ public class calculator {
 	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println(" Calculator");
+	      double num1;
+	      double num2;
+	      double ans;
+	      char op;
+	      @SuppressWarnings("resource")
 		Scanner reader = new Scanner(System.in);
-	    System.out.print("Enter two numbers: ");
-
-	    // nextDouble() reads the next double from the keyboard
-	    double first = reader.nextDouble();
-	    double second = reader.nextDouble();
-
-	    System.out.print("Enter an operator (+, -, *, /): ");
-	    char operator = reader.next().charAt(0);
-
-	    double result = 0.0;
-
-	    switch (operator) {
-	      case '+':
-	        result = first + second;
-	        break;
-
-	      case '-':
-	        result = first - second;
-	        break;
-
-	      case '*':
-	        result = first * second;
-	        break;
-
-	      case '/':
-	        result = first / second;
-	        break;
-
-	      // operator doesn't match any case constant (+, -, *, /)
-	      default:
-	        System.out.printf("Error! operator is not correct");
-	        return;
-	    }
-
-	    System.out.println(first + " " + operator + " " + second + " = " + result);
-	  
+	      System.out.print("Enter two numbers: ");
+	      num1 = reader.nextDouble();
+	      num2 = reader.nextDouble();
+	      System.out.print("\nEnter an operator (+, -, *, /): ");
+	      op = reader.next().charAt(0);
+	      switch(op) {
+	         case '+': ans = num1 + num2;
+	            break;
+	         case '-': ans = num1 - num2;
+	            break;
+	         case '*': ans = num1 * num2;
+	            break;
+	         case '/': ans = num1 / num2;
+	            break;
+	      default: System.out.printf("Error! Enter correct operator");
+	         return;
+	      }
+	      System.out.print("\nThe result is given as follows:\n");
+	      System.out.printf(num1 + " " + op + " " + num2 + " = " + ans);
 
 	}
 
